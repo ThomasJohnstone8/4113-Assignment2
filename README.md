@@ -44,6 +44,12 @@ Step 6: Select the mainpage.html and click Go Live in the bottom right
 
 Step 7: This will open your browser and will open the HTML website for you to explore and see.
 
+flask --app app_login.py run
+
+(this is to direct what the flask should look for and run)
+
+
+
 
 # Project Plan
 
@@ -65,6 +71,12 @@ When it comes to my website, many legal and ethical considerations must be ident
 # Risk assessment
 
 There are various risks to consider when approaching my website. As it is a website with user interaction, there can be a chance of phishing attacks. A policy to follow to avoid this would be to warn all users about the link that they are clicking. My website can ensure this by implementing a pop-up before a link is clicked; however, this would be a future improvement to make to the website. Another risk involved is weak passwords; this can be avoided by making data validation to confirm that the password is strong. For example, including an uppercase character, a minimum of 1 symbol and over 12 characters. A final risk to consider in my website would be ensuring the protection of our stored data so hackers cannot gain access to it and possibly sell the data or use it in a social-engineering attack on the user. This can be mitigated with a MFA (multi-factor authentication) check as well as a strong and realiable database host that will keep the data private.
+
+
+session management
+
+password hashing
+
 
 # Future considerations
 
