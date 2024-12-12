@@ -4,7 +4,7 @@
 <title>IntelliTech</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,6 +56,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                     <label for="surname">Surname<font color="#ff0033">*</font></label>
                     <input type="text" id="surname" name="surname" placeholder="Surname" required>
                 </div>
+                <div class="input-box">
+                  <label for="password">password<font color="#ff0033">*</font></label>
+                  <input type="text" id="password" name="password" placeholder="Password" required>
+              </div>
+              <div class="input-box">
+                <label for="confirmpassword">confirmpassword<font color="#ff0033">*</font></label>
+                <input type="text" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required>
+            </div>
                 <div class="input-box">
                     <label for="email">Email<font color="#ff0033">*</font></label>
                     <input type="email" id="email" name="email" placeholder="Email" required>
