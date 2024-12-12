@@ -6,16 +6,21 @@ When mentioning these frameworks such as Bootstrap for CSS, they can be compared
 
 Tailwind is a great tool for those with a good knowledge of CSS, a design in mind for a custom website and a medium-sized project. Whereas Bootstrap is good for beginners, quick projects and a pre-made library of simple components of a website. When it came time for me to choose, Bootstrap ticked all the boxes for me.
 
+A new addition from the second part of the assignment is the inplementation of a database. After narrowing dowwn my options I was left with two options MySQL or MongoDB
+
+MongoDB is a NoSQL database that uses document orientated formatting called BSON (binary JSON). Each document has different structures meaning that parts can be removed as well as added without complication with the other documents in the database. Additionally, MongoDB is a lot more beginner-friendly with its web approach and simple design which is one reason I chose it over MySQL. Another reason I chose MongoDB over MySQL is because data can be added from a flask form and it will create the database and make the record whereas MySQL needs to have a table already made for the location of the record.
 # Version Control
 
-Hello, Welcome to my repository for Tech Stack Assessment 1.
+Hello, Welcome to my repository for Tech Stack Assessment 2.
 
-Here is the link to my repsoitory: ()
+Here is the link to my repsoitory: (https://github.com/ThomasJohnstone8/4113-Assignment2)
 
 
 # Project Overview
 
 In this project, I aim to create a fully functioning website using HTML, CSS and JavaScript. In this website, I will include user registration and authentication. The user will be able to sign up, login and manage the account. Another feature I will add is the ability to upload a profile picture, update it and list their interests in the profile. I will add more, smaller features such as a drop-down menu to help navigate the website, an About Us page that gives the user insight to the website and its uses, a Contact Us page that gives the user options to contact us, user reviews so the user can leave reviews of the place, a simple homepage that directs the user in different directions and lastly, a search for AI tools section (product page). Furthermore, another goal of my website is to include a page where users can interact and collaborate. This is achieved by making posts and viewing previous posts.
+
+In the second half of the project, I aim to implement a MongoDB database to my website that collects user login, user registration, tool creation and more.
 
 
 # Installation Instuctions
@@ -24,44 +29,47 @@ Step 1: Unzip the file from Moodle.
 
 Step 2: Add the unzipped file to VS code
 
-![openfolder](openfolder.png)
+![openfolder](/static/Images/openfolder.png)
 
-Step 3: Ensure you have downloaded the Live Server extension on VS code.
+Step 3: Ensure you have all the extensions needed for this project which are the following: MongoDB for VS code, Python, Pylance, Python Debugger
 
-![extensions](extensions.png)
+![extensions](/static/Images/extensions.png)
 
-Step 4: Search in the extensions tab for "Live Server" and select the one with the purple icon.
+![allExtentions](/static/Images/allExtensions.png)
 
-![liveserver](liveserver.png)
+Step 4: Now ensure you have a version of python install on your computer
 
-Step 5: Click Install
+![pythonDL](/static/Images/pythonDL.png)
 
-![install](install.png)
 
-Step 6: Select the mainpage.html and click Go Live in the bottom right
+Step 5: open a new terminal and type the following in:
 
-![golive](golive.png)
+pip install pymongo
 
-Step 7: This will open your browser and will open the HTML website for you to explore and see.
+pip install Flask
+
+
+Step 6: Once you have everything downloaded, you are ready to go. go to the app_login.py file and press the run button in the top right. If that doesnt work, use the command below in the terminal.
+
 
 flask --app app_login.py run
 
-(this is to direct what the flask should look for and run)
+# Technical Challenges
 
-
+There were many technical challenges that I was faced with and with little communication with my tutors it was hard to overcome these. I dealt with various errors such as 300s 400s and a few flask errors within my python. The python syntax errors were quick to fix as my python skills have developed severely since starting this course. On the other hand, the connection issues were a thorn in my side.
 
 
 # Project Plan
 
-Below is my Gantt chart that I used to help track and manage my time throughout the project. The Gantt chart has been updated to reflect the change to the deadline as well. The Gantt chart includes all the correct fields such as choice of tech stack, legal and ethical consideration. A few changes were made to the Gantt chart to adapt to the change in submission and it allowed me to spend more time fleshing out the website and improving the overall look of it using HTML and CSS features. As well as this, it allowed me to manage my time better and space out spending a day on each of the documentation.
+Below is my Gantt chart that I used to help track and manage my time throughout the first part of the project. The Gantt chart has been updated to reflect the change to the deadline as well. The Gantt chart includes all the correct fields such as choice of tech stack, legal and ethical consideration. A few changes were made to the Gantt chart to adapt to the change in submission and it allowed me to spend more time fleshing out the website and improving the overall look of it using HTML and CSS features. As well as this, it allowed me to manage my time better and space out spending a day on each of the documentation.
 
-![ganttchart](ganttchart.png)
+![ganttchart](/static/Images/ganttchart.png)
 
 # User Guide
 
 Below are instructions on how to navigate the website through a flowchart; this dictates the flow of the website and how the user can navigate it.
 
-![flowchart](flowchart.png)
+![flowchart](/static/Images/flowchart.png)
 
 # Legal and ethical consideration
 
@@ -72,15 +80,19 @@ When it comes to my website, many legal and ethical considerations must be ident
 
 There are various risks to consider when approaching my website. As it is a website with user interaction, there can be a chance of phishing attacks. A policy to follow to avoid this would be to warn all users about the link that they are clicking. My website can ensure this by implementing a pop-up before a link is clicked; however, this would be a future improvement to make to the website. Another risk involved is weak passwords; this can be avoided by making data validation to confirm that the password is strong. For example, including an uppercase character, a minimum of 1 symbol and over 12 characters. A final risk to consider in my website would be ensuring the protection of our stored data so hackers cannot gain access to it and possibly sell the data or use it in a social-engineering attack on the user. This can be mitigated with a MFA (multi-factor authentication) check as well as a strong and realiable database host that will keep the data private.
 
+To avoid some of these issues, in the 2nd part of this project, I was tasked with implementing a database on my website. A database holds many risks and therefore, I implemented a few countermeasures to mitigate them. First is Werkzeug password hashing. This keeps the security in the database hashed and protected. Meaning that if the database were to get breached, the passwords of the users would not be leaked or taken. Additionally, MongoDB the database provider I am using has already implemented security in the fact that only certain IP addresses can connect to the database and see the records.
 
-session management
 
-password hashing
+# Real World Application
+
+One real world application of a social media platform such as Instagram. In these types of platforms, users can create accounts, post content, like and share posts and more. This can be handled by Flask in the backend dealing with user posts, managing profiles and routing them. MongoDB can be used to store the user data, comments, followers and more.
 
 
 # Future considerations
 
 My future considerations for this project would be to include a scalable host and a backend to the server. This backend database will allow the user to login and register an account; this interactivity will allow the user to interact with the website more by locking the features behind a login. Another improvement I will make is adding a cart and better product system; this will allow the user to navigate the product page better, as well as adding and removing products in a cart, which would help the user when purchasing multiple items. A scalable host would allow the website to expand in the future and allow for more features and expansions. Returning to the product page, at the moment of the website being made, the likes and dislikes are native to your personal computer. In the future, I would like to expand this and allow the likes and dislikes to be stored in a database and the product to be ranked from top to bottom based on the likes and dislikes. This would be a complicated expansion; however, in the future it is a doable task. To conclude my future improvements, I will develop the template more and change it. In the assignment I used a template and in the future I will consider changing this and starting from scratch. This can be achieved with a better understanding of HTML, CSS and JavaScript.
+
+A few of these considerations have been met, but a few haven't. One consideration I still wish to change is the use of a template in both parts of the assignment.
 
 
 # In code documentation
